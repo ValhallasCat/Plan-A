@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePlans</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.5.0/css/tabulator.min.css" rel="stylesheet">
+    <link href="careplan_vidi.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>CarePlans</h1>
+        <p class="subtitle">Hier werden die CarePlans der Patientin Frau Mustermann angeführt. Klicken Sie auf die Checkbox neben der Tabellenzeile um die einzelnen Aktivitäten und Ziele eines oder mehrerer CarePlans anzeigen zu lassen.</p>
+    </div>
+    <div id="example-table"></div>
+
+    <div id="detail-section" style="display: none;">
+        <div id="detail-controls">
+            <h3>Ausgewählte Care Pläne: <span id="selected-count">0</span></h3>
+            <div class="button-group">
+                <button id="show-aktivitat" class="filter-btn active">Alle Aktivitäten anzeigen</button>
+                <button id="show-goal" class="filter-btn active">Alle Ziele anzeigen</button>
+                <button id="clear-selection" class="clear-btn">Zurücksetzen</button>
+            </div>
+        </div>
+
+        <div id="aktivitat-section" class="detail-table-section">
+            <h4>Aktivitäten</h4>
+            <div id="aktivitat-table"></div>
+        </div>
+
+        <div id="goal-section" class="detail-table-section">
+            <h4>Ziele</h4>
+            <div id="goal-table"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.5.0/js/tabulator.min.js"></script>
+    <script src="careplan_vidi.js"></script>
+</body>
+</html>
