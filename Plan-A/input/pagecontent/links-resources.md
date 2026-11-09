@@ -1,6 +1,3 @@
-# Links & Resources
-
- 
 | Resource | Link |
 |---|---|
 | Plan-A Confluence space (meeting notes) | [Confluence](https://hl7at.atlassian.net/wiki/spaces/BAL/pages/371130370/AG+FHIR+Plan-A) |

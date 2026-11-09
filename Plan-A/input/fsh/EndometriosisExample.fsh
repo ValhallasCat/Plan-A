@@ -69,7 +69,7 @@ Description: "Pain diary app used by the patient; author of the EndoApp Sub Care
 // ── Condition and Goal ──────────────────────────────────────────────────────────
 
 Instance: endometriosis-condition
-InstanceOf: Condition
+InstanceOf: ConditionUvIps
 Usage: #example
 Title: "Endometriose"
 Description: "The diagnosis the Main CarePlan addresses."
@@ -88,7 +88,7 @@ Description: "Goal of the CarePlans: reduce pain to 0 on the 0-10 pain scale."
 * achievementStatus = http://terminology.hl7.org/CodeSystem/goal-achievement#in-progress
 * category = http://snomed.info/sct#278414003 "Pain management (procedure)"
 * priority = http://terminology.hl7.org/CodeSystem/goal-priority#medium-priority
-* description = http://snomed.info/sct#18297005 "Pain relief"
+* description = http://snomed.info/sct#182970005 "Pain relief"
 * subject = Reference(endometriosis-patient)
 * target.measure = http://loinc.org#72514-3 "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
 * target.detailInteger = 0
@@ -187,7 +187,7 @@ Description: "Referral to an endometriosis support group; focus of the support g
 * basedOn = Reference(endometriosis-main-careplan)
 * status = #active
 * intent = #plan
-* category = http://snomed.info/sct#462451000124105 "Education about chronic pain"
+* category = http://snomed.info/sct#408956004 "Chronic pain control education"
 * priority = #routine
 * code = http://snomed.info/sct#711281004 "Referral to support group"
 * subject = Reference(endometriosis-patient)
@@ -216,7 +216,7 @@ Description: "The patient should make an appointment with a dietitian."
 * asNeededCodeableConcept = http://snomed.info/sct#271681002 "Stomach ache"
 * authoredOn = "2025-08-01"
 * requester = Reference(endometriosis-gynecologist)
-* performerType = http://snomed.info/sct#168827000 "Nutritionist"
+* performerType = http://snomed.info/sct#768827000 "Nutritionist"
 * patientInstruction = "Machen Sie bitte einen Termin bei Herrn Diätologen aus. Telefonnummer +43 123 45678"
 
 Instance: endometriosis-devicerequest-tens
@@ -248,7 +248,7 @@ Description: "The dietitian prescribes a Mediterranean (anti-inflammatory) diet 
 * dateTime = "2025-08-30"
 * orderer = Reference(endometriosis-dietitian)
 * foodPreferenceModifier = http://snomed.info/sct#227326009 "Canned chick peas"
-* excludeFoodModifier = http://snomed.info/sct#102263004 "Eggs"
+* excludeFoodModifier = http://snomed.info/sct#102263004 "Eggs (edible)"
 * oralDiet.type = http://snomed.info/sct#1255163004 "Mediterranean diet"
 * oralDiet.schedule.repeat.duration = 6
 * oralDiet.schedule.repeat.durationUnit = #mo

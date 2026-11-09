@@ -1,12 +1,10 @@
-# EU and International Context
-
 This IG builds on specifications at two levels: the **international** Patient Summary, which is the common base, and the **European** specifications for the **European Health Data Space (EHDS)**, where the Patient Summary is one of the priority data categories. Both are still evolving, and the working group follows them closely.
 
-## International
+### International
 
 - **International Patient Summary (IPS)**: the [international](https://hl7.org/fhir/uv/ips/2.0.1/en/StructureDefinition-Composition-uv-ips.html) base for Patient Summaries worldwide. It includes CarePlan (R4) in the "Plan of Care" section. Both the European and the Austrian Patient Summary build on it.
 
-## European Union (EHDS)
+### European Union (EHDS)
 
 - **HL7 Europe Patient Summary (EPS)**: profiles the CarePlan (R4) within the EPS Composition and provides a mapping between the EPS CarePlan and the EHDS care plan model. These [mapping](https://build.fhir.org/ig/hl7-eu/eps/map-ehdscareplan.html) attempts show that `CarePlan.activity.detail` causes problems when moving towards R6.
 - **Xt-EHR Care Plan EHDS Logical Model**: contains a dedicated *Care plan model*, which defines the information expected at the European level (classification and functional profiles of EHR systems, draft): contains an interoperability use case for [care plans](https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSCarePlan.html). It is not a 1:1 match with FHIR, but it shows clear synergies with this IG.

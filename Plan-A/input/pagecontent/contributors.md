@@ -1,5 +1,3 @@
-# Contributors
-
 This IG is developed by the members of the HL7 Austria working group **Plan-A**. Contributions came from:
  
 - healthcare providers

@@ -14,6 +14,8 @@ Description: "A profile of the CarePlan resource for use within the Austrian Pat
 
 * description 1..1
 
+* addresses only Reference(ConditionUvIps)
+
 
 * activity.detail 0..0
 * activity ^short = "Use activity.reference instead of activity.detail"

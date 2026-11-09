@@ -16,15 +16,17 @@ releaseLabel: ci-build
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Example Publisher
-  url: http://example.org/example-publisher
+  name: HL7 Austria
+  url: https://hl7.at
   # email: test@example.org
 
 # hl7.at.fhir.elga.aps.r4 = Austrian Patient Summary (R4), provides the AT APS Patient profile
 # hl7.at.fhir.core.r4 = HL7 Austria FHIR Core, AT APS Patient is derived from its Patient profile
+# hl7.fhir.uv.ips = International Patient Summary (STU2), provides the IPS Condition referenced by CarePlan.addresses
 dependencies:
   hl7.at.fhir.elga.aps.r4: 1.0.0
   hl7.at.fhir.core.r4: 2.0.0
+  hl7.fhir.uv.ips: 2.0.0
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced

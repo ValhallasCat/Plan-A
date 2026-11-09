@@ -1,6 +1,4 @@
-# Visualization Considerations
-
-## Visualization 
+### Visualization 
 
 The CarePlan was implemented as a proposal in **Vidi**, a visualization tool for the Patient Summary (see [Use Cases – UC2](uc2-careplan-visualization.html)). Lessons learned:
  
@@ -12,7 +10,7 @@ The CarePlan was implemented as a proposal in **Vidi**, a visualization tool for
 - **Limited capacity.** Vidi cannot display unlimited data. Only elements marked as *shall display* need to be shown.
 - **Incremental development.** Vidi should evolve step by step without falling into "analysis paralysis". A separate sub-IG for Vidi may be needed to define clearly what it can and cannot display.
 
-## FHIR Version Considerations
+### FHIR Version Considerations
  
 | Topic | R4 | R5 / R6 | Approach in this IG |
 |---|---|---|---|
@@ -21,4 +19,3 @@ The CarePlan was implemented as a proposal in **Vidi**, a visualization tool for
 | PlanDefinition `$apply` | Returns a CarePlan | Returns a `RequestOrchestration` | The working group follows the `$apply` logic, so that the creation of a CarePlan from a PlanDefinition stays traceable across versions. |
 | Goals per activity | `activity.detail.goal` | No direct equivalent | Use goals on (sub-)CarePlans. |
  
-![PlanDefinition $apply in R4B, R5 and R6](plandefinition-apply-versions.png)

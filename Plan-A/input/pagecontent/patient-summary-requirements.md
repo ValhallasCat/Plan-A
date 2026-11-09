@@ -1,5 +1,3 @@
-# Patient Summary Requirements
-
 ### Guiding principles
  
 - **Patient-centered and simple.** For patients, what matters most is a clear overview of *which measures are due when*. Whether this information comes from one or several CarePlans matters less, so the meta level can be kept minimal.
