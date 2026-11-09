@@ -23,7 +23,7 @@ This IG documents the working group's answers to these questions, the design cho
  
 This IG should be read in the following order:
  
-1. **[Introduction](background-purpose.html)**: the background and general information needed to understand this IG, including the European context
+1. **[Introduction](background-purpose.html)**: the background and general information needed to understand this IG, including the EU and international context
 2. **[Functional](patient-summary-requirements.html)**: the design choices made, the coding and terminology considerations, and the known limitations, including those concerning visualization
 3. **[Use Cases](uc1-careplan-endometriosis.html)**: the use cases for which the profiled CarePlan resource is intended: the endometriosis CarePlan example and the CarePlan visualization
 4. **[Artifacts](artifacts.html)**: the profiled CarePlan, including its constraints and examples

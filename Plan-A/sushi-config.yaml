@@ -85,8 +85,8 @@ pages:
     title: Home
   background-purpose.md:
     title: "Background & Purpose"
-  european-context.md:
-    title: "European Context (EU / EHDS)"
+  eu-international-context.md:
+    title: "EU and International Context"
   scope-audience.md:
     title: "Scope & Audience"
   patient-summary-requirements.md:
@@ -110,7 +110,7 @@ menu:
   Home: index.html
   Introduction:
     "Background & Purpose": background-purpose.html
-    "European Context (EU / EHDS)": european-context.html
+    "EU and International Context": eu-international-context.html
     "Scope & Audience": scope-audience.html
   Functional:
     "Patient Summary Requirements": patient-summary-requirements.html
