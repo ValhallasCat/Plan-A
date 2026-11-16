@@ -10,12 +10,21 @@ The CarePlan was implemented as a proposal in **Vidi**, a visualization tool for
 - **Limited capacity.** Vidi cannot display unlimited data. Only elements marked as *shall display* need to be shown.
 - **Incremental development.** Vidi should evolve step by step without falling into "analysis paralysis". A separate sub-IG for Vidi may be needed to define clearly what it can and cannot display.
 
-### FHIR Version Considerations
- 
-| Topic | R4 | R5 / R6 | Approach in this IG |
-|---|---|---|---|
-| `instantiatesCanonical` / `instantiatesUri` | Available | Not supported in R6 | May be used in R4. In R6, this information has to move into a `RequestOrchestration`, linked via `basedOn` or `activity.plannedActivityReference`. |
-| `activity.detail` | Available | Removed; activities are described only via references | Not used. Activities are described by referenced resources. The official cross-version mapping does not cover the working group's needs. |
-| PlanDefinition `$apply` | Returns a CarePlan | Returns a `RequestOrchestration` | The working group follows the `$apply` logic, so that the creation of a CarePlan from a PlanDefinition stays traceable across versions. |
-| Goals per activity | `activity.detail.goal` | No direct equivalent | Use goals on (sub-)CarePlans. |
- 
+### Uniform display of activities
+
+A CarePlan can reference many different types of resources as activities, for example `Task`, `ServiceRequest`, `DeviceRequest`, `NutritionOrder` or `CommunicationRequest`. Each of these resource types stores its information in different elements, which makes it difficult to display activities uniformly in a Patient Summary.
+
+It is therefore important that every resource describing an activity provides the same basic information in a way that can be displayed consistently: a **title** and a **description** of the activity. For Goals this is less of a concern, as the Goal resource is the same for every CarePlan and already has a `description` element.
+
+The working group addressed this in [Use Case 2](uc2-careplan-visualization.html). The Plan-A profiles define which element provides the displayable text for each activity resource:
+
+| Resource | Element with the displayable text |
+|---|---|
+| `Task` | `description` |
+| `ServiceRequest` | `patientInstruction` |
+| `Appointment` | `description` and `patientInstruction` |
+| `DeviceRequest` | `text` (narrative) |
+| `CommunicationRequest` | `text` (narrative) |
+| `NutritionOrder` | `oralDiet.instruction`, `supplement.instruction` or `enteralFormula.administrationInstruction` |
+| `RequestGroup` | `action.description` |
+| `VisionPrescription` | `note` extension |

@@ -11,7 +11,7 @@ The Plan-A (R4) Implementation Guide (IG) defines a standardized, FHIR®-based a
 A Patient Summary is designed to give a concise, standardized snapshot of a patient's health: problems, medications, allergies, procedures, and similar facts. A care plan is different in nature. It describes intended activities, goals, responsibilities, and progress over time. Bringing the two together raises questions that existing specifications do not fully answer:
  
 - **What belongs in the summary?** Which parts of a CarePlan are relevant enough to be shown in a Patient Summary, and which should remain in the source system.
-- **How can it be coded?** Diagnoses are well covered by terminologies such as SNOMED CT, ICD-10, and ICD-11. Care plan activities, goals, and outcomes are much harder to code consistently.
+- **How can it be coded?** Diagnoses are well covered by terminologies such as SNOMED CT, ICD-10, and ICD-11. CarePlan activities, goals, and outcomes are much harder to code consistently.
 - **How can it be displayed?** Patient Summary visualizations are largely list-based. A CarePlan's timeline and the relationships between its elements do not map easily onto that layout.
 This IG documents the working group's answers to these questions, the design choices made, and the limitations that remain open.
  
@@ -29,7 +29,7 @@ This IG should be read in the following order:
 
 #### Status
  
-This IG is currently a **draft** and is subject to change. It is based on **FHIR R4** to align with the Austrian Patient Summary and the IPS. Implementers should be aware that the CarePlan resource has been revised in later FHIR versions. The [FHIR Version Considerations](visualization-considerations.html#fhir-version-considerations) section describes the differences relevant to this IG.
+This IG is currently a **draft** and is subject to change. It is based on **FHIR R4** to align with the Austrian Patient Summary and the IPS. Implementers should be aware that the CarePlan resource has been revised in later FHIR versions. The [FHIR version strategy](background-purpose.html#fhir-version-strategy) section describes the differences relevant to this IG.
  
 ### Working Group
  

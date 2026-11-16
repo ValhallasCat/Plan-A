@@ -20,7 +20,8 @@ A focus group of the working group met six times over summer 2025 and developed 
   - category: SNOMED CT `773506001` *Gynecology care plan*
 - **Sub-CarePlans:** for additional contexts. For example, if the patient also develops a heart condition, a dietitian could manage a sub-CarePlan.
 - **Activities:** represented as linked resources. For example, a `Task` whose `focus` references a `ServiceRequest`.
-![Endometriosis CarePlan example](endometriosis-careplan.svg)
+
+<img src="endometriosis-careplan.svg" alt="Endometriosis CarePlan example" style="width:100%; height:auto;"/>
 
 The example is available as FHIR instances:
 

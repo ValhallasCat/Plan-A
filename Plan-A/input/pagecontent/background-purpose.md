@@ -13,6 +13,13 @@ This work showed how a care plan within a Patient Summary could look in Austria.
 
 ### FHIR version strategy
  
-This IG uses **FHIR R4 as its base**, in line with the APS and IPS. It is designed while keeping in mind how the CarePlan resource looks in **R5 and R6**, so that a later mapping to a higher version remains possible. The most important version differences are summarized on the [Functional](visualization-considerations.html#fhir-version-considerations) page.
+This IG uses **FHIR R4 as its base**, in line with the APS and IPS. It is designed while keeping in mind how the CarePlan resource looks in **R5 and R6**, so that a later mapping to a higher version remains possible. The most important version differences and the approach this IG takes are summarized below.
  
 <img src="careplan_diff_r4_r5_r6.svg" alt="Differences of the CarePlan resource between R4, R5 and R6" style="width:100%; height:auto;"/>
+
+| Topic | R4 | R5 / R6 | Approach in this IG |
+|---|---|---|---|
+| `instantiatesCanonical` / `instantiatesUri` | Available | Not supported in R6 | May be used in R4. In R6, this information has to move into a `RequestOrchestration`, linked via `basedOn` or `activity.plannedActivityReference`. |
+| `activity.detail` | Available | Removed; activities are described only via references | Not used. Activities are described by referenced resources. The official cross-version mapping does not cover the working group's needs. |
+| PlanDefinition `$apply` | Returns a CarePlan | Returns a `RequestOrchestration` | The working group follows the `$apply` logic, so that the creation of a CarePlan from a PlanDefinition stays traceable across versions. |
+| Goals per activity | `activity.detail.goal` | No direct equivalent | Use goals on (sub-)CarePlans. |

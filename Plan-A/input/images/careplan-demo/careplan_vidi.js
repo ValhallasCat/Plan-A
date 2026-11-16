@@ -10,7 +10,7 @@ var nestedData = [
                 conditionActivity: "Endometriose", //  Condition "code.displayName" -> für Expert*innen soll auch immer die Codierung angezeigt werden
                 TypeActivity: "Die Patientin soll eine Selbsthilfegruppe zum Thema Schmerzmanagement besuchen.", // Task "descprition"
                 RessourceType: "Service Request", // Typ der verlinkten Ressoruce im Task selbst, also Task "focus"
-                priorityActivity: "Niedere Priorität", // Task "priority" -> hier könnte man mappen: "routine" -> nieder Priorität; "urgent" -> mittlere Priorität;   "asap" "stat" -> hohe Priorität
+                priorityActivity: "Niedrige Priorität", // Task "priority" -> hier könnte man mappen: "routine" -> nieder Priorität; "urgent" -> mittlere Priorität;   "asap" "stat" -> hohe Priorität
                 restrictionrepetitions: "10 Wiederholungen", // Task "restriction.repetitions"
                 restrictionperiodes: "von 01.01.2025 bis 01.01.2026", // Task "restriciton.periode"
                 patientReported: true, // nur als Idee -> gerne auch weglassen
@@ -24,9 +24,9 @@ var nestedData = [
             },
             {
                 conditionActivity: "Endometriose",
-                TypeActivity: "Die Patientin soll eine antiinflammatorische Ernährungsform folgen.",
-                RessourceType: "Nutirition Order",
-                priorityActivity: "Niedere Priorität",
+                TypeActivity: "Die Patientin soll einer antiinflammatorischen Ernährungsform folgen.",
+                RessourceType: "Nutrition Order",
+                priorityActivity: "Niedrige Priorität",
                 restrictionrepetitions: "Keine",
                 restrictionperiodes: "von 01.01.2025 bis 01.06.2026",
                 patientReported: true,
@@ -35,7 +35,7 @@ var nestedData = [
                 descriptionActivity: //Task als übergeordnetes Element, in der Beschreibung dann spezifisch auf den Ressorucen Type eingehen...
                 `<b>Lebensmittel empfohlen</b>: Kichererbsen <br>
                  <b>Lebensmittel zu vermeiden:</b> Eier<br>
-                 <b>Einzuenhemne Nahrungsergänzungsmittel:</b> Omega-3, alle 3 Tage 500mg<br>
+                 <b>Einzunehmende Nahrungsergänzungsmittel:</b> Omega-3, alle 3 Tage 500 mg<br>
                  <b>Notiz</b>: Omega-3 immer nach Mahlzeit einnehmen <br>
                 <b>Kontaktperson?</b> CarePlan/Sub CarePlan Author
                 `
@@ -43,7 +43,7 @@ var nestedData = [
 
             {
                 conditionActivity: "Endometriose",
-                TypeActivity: "Die Patientin soll Kontak zur Fachärztin aufnehmen um aktue Schmerzen abzuklären.",
+                TypeActivity: "Die Patientin soll Kontakt zur Fachärztin aufnehmen, um akute Schmerzen abzuklären.",
                 RessourceType: "Communication Request",
                 priorityActivity: "Hohe Priorität",
                 restrictionrepetitions: "Keine",
@@ -52,16 +52,16 @@ var nestedData = [
                 codereason: "Akute Unterbauchschmerzen",
                 codeRessource: "Abklärung", // Communication Request "category"
                 descriptionActivity: //Task als übergeordnetes Element, in der Beschreibung dann spezifisch auf den Ressorucen Type eingehen...
-                `<b>Zu Kontaktierende Person:</b> Fachärztin für Gynäkologie<br>
+                `<b>Zu kontaktierende Person:</b> Fachärztin für Gynäkologie<br>
                  <b>Nachricht an Fachärztin:</b> Seit 14 Tagen liegt der Wert auf der Schmerzskala über 8 <br>
-                 <b>Notiz</b>: Seit 14 Tage starke Schmerzen in der unteren Bauchregion, werden täglich schlimmer. <br>
+                 <b>Notiz</b>: Seit 14 Tagen starke Schmerzen in der unteren Bauchregion, werden täglich schlimmer. <br>
                 <b>Kontaktperson?</b> CarePlan/Sub CarePlan Author <br>
                 `
             },
 
             {
                 conditionActivity: "Endometriose",
-                TypeActivity: "Die Patientin soll ein TRNS Gerät bei Bedarf verwenden.",
+                TypeActivity: "Die Patientin soll ein TENS-Gerät bei Bedarf verwenden.",
                 RessourceType: "Device Request",
                 priorityActivity: "Mittlere Priorität",
                 restrictionrepetitions: "Keine",
@@ -79,7 +79,7 @@ var nestedData = [
             {conditionGoal:"Endometriose", // Condition "code"
             priority: "Hohe Priorität", // Goal "priority"
             descriptionGoal: "Schmerzempfinden soll auf ein Minimum gesenkt werden.", // Goal "description"
-            target: "Schmerzskala 1-10, zu erreichender Wert: 0", //Goal  "target.measure" und "target.detail"
+            target: "Schmerzskala 0-10, zu erreichender Wert: 0", //Goal  "target.measure" und "target.detail"
             achivementStatusGoal: "in Bearbeitung", patientReportedGoal: true}, // Goal "achievementStatus"
 
             {conditionGoal:"Endometriose",
@@ -93,7 +93,7 @@ var nestedData = [
     {
         id: 2,
         titel: "CarePlan Herzinsuffizienz",
-        description: "Der CarePlan dient dazu aktuelle Probleme des Patienten aufgrund seiner Herzinsuffizienz zu lindern.",
+        description: "Der CarePlan dient dazu, aktuelle Probleme des Patienten aufgrund seiner Herzinsuffizienz zu lindern.",
         created: "01.01.2025",
         status: "aktiv",
         aktivitat: [
@@ -105,7 +105,7 @@ var nestedData = [
                 restrictionrepetitions: "Keine",
                 restrictionperiodes: "ab 01.01.2025",
                 patientReported: false,
-                codereason: "Erhöhte Cholesterinwert",
+                codereason: "Erhöhter Cholesterinwert",
                 codeRessource: "", // keine weitere Ressoruce wurde verlinkt
             },
         ],
@@ -209,8 +209,8 @@ function initDetailTables() {
             {title: "Für...", field: "conditionGoal", responsive: 0},
             {title: "Priorität", field: "priority", responsive: 1},
             {title: "Beschreibung", field: "descriptionGoal", formatter: "textarea", responsive: 2},
-            {title: "Ziel Zustand", field: "target", formatter: "textarea", responsive: 3},
-            {title: "Goal Erreicht?", field: "achivementStatusGoal", responsive: 4},
+            {title: "Zielzustand", field: "target", formatter: "textarea", responsive: 3},
+            {title: "Ziel erreicht?", field: "achivementStatusGoal", responsive: 4},
             {
                 title: "Selbstauskunft Patient: <br> Ziel erreicht?",
                 field: "patientReportedGoal",

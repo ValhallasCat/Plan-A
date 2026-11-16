@@ -8,7 +8,7 @@ This IG builds on specifications at two levels: the **international** Patient Su
 
 - **HL7 Europe Patient Summary (EPS)**: profiles the CarePlan (R4) within the EPS Composition and provides a mapping between the EPS CarePlan and the EHDS care plan model. These [mapping](https://build.fhir.org/ig/hl7-eu/eps/map-ehdscareplan.html) attempts show that `CarePlan.activity.detail` causes problems when moving towards R6.
 - **Xt-EHR Care Plan EHDS Logical Model**: contains a dedicated *Care plan model*, which defines the information expected at the European level (classification and functional profiles of EHR systems, draft): contains an interoperability use case for [care plans](https://www.xt-ehr.eu/fhir/models/en/StructureDefinition-EHDSCarePlan.html). It is not a 1:1 match with FHIR, but it shows clear synergies with this IG.
-- **xShare Care Plan**: an HL7 Europe initiative ([xShare Care Plan IG](https://build.fhir.org/ig/hl7-eu/xshare-careplan/index.html), [X-Bundles](https://x-bundles.ehr-exchange-format.eu/xb-4/main.html)) dealing with care plan exchange. It is currently paused.
+- **xShare Care Plan**: an HL7 Europe initiative ([xShare Care Plan IG](https://hl7.eu/fhir/ig/xshare-careplan/StructureDefinition-xshare-careplan.html), [X-Bundles](https://x-bundles.ehr-exchange-format.eu/xb-4/main.html)) dealing with care plan exchange. It is currently paused.
 
 The EU discussion addresses the transition from R4 to higher versions. Implementations are expected to receive a **warning when `CarePlan.activity.detail` is populated**, as it is not forward compatible.
 
